@@ -110,100 +110,103 @@ header nav a:hover {
   transform: scale(1.1);
 }
 
-/* Projects Section */
+/* Projects Section Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 2rem; /* Space between cards */
+  justify-items: center; /* Center align each card */
 }
 
+/* Individual Project Card */
 .project-card {
-  width: 320px; /* Adjusted width for better spacing */
-  height: 420px; /* Adjusted height */
-  margin-bottom: 3rem; /* Add space below each project card */
-  perspective: 1000px;
-  position: relative;
-  text-align: center;
+  width: 320px; /* Set card width */
+  height: 420px; /* Set card height */
+  perspective: 1000px; /* Enable 3D effect for flipping */
+  margin-bottom: 3rem; /* Space below each card */
+  position: relative; /* Required for child elements' positioning */
+  text-align: center; /* Center align card content */
 }
 
-
+/* Inner Card (for flipping effect) */
 .card-inner {
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d; /* Maintain 3D effect */
+  transition: transform 0.6s ease-in-out; /* Smooth flip animation */
 }
 
-.project-card.flipped .card-inner {
-  transform: rotateY(180deg);
+/* Flipped State */
+.card-inner.flipped {
+  transform: rotateY(180deg); /* Rotate to the back side */
 }
 
-.card-front, .card-back {
+/* Front and Back of Card */
+.card-front,
+.card-back {
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding: 1rem;
-  position: absolute;
+  position: absolute; /* Stack front and back */
   top: 0;
   left: 0;
+  border-radius: 10px; /* Rounded corners */
+  backface-visibility: hidden; /* Hide back side when not flipped */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex; /* Flexbox for content alignment */
+  flex-direction: column; /* Vertical stacking */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  background-color: white; /* Card background */
+  padding: 1rem; /* Inner spacing */
 }
 
+/* Back of Card */
 .card-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Flip the back side */
 }
 
+/* Front Content (Image and Button) */
 .card-front img {
-  width: 80%;
-  height: auto;
-  margin-bottom: 1rem;
+  width: 80%; /* Image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 1rem; /* Space below image */
 }
 
+/* GitHub Button */
 .card-front .btn {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 1rem; /* Space above button */
+  padding: 0.5rem 1rem; /* Button padding */
+  background-color: #007bff; /* Primary blue */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth hover effects */
 }
 
+.card-front .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Flip Button (Below Each Card) */
 .flip-btn {
-  display: block;
-  margin: 0.5rem auto 0;
-  padding: 0.5rem 1.5rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block; /* Button displayed as block */
+  margin: 1rem auto 0; /* Centered below the card */
+  padding: 0.5rem 1.5rem; /* Button padding */
+  background-color: #007bff; /* Primary blue */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Readable text size */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
 }
-
-
-.card-front .btn:hover, .flip-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
-}
-
-/* Updated Flip Button */
 
 .flip-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
 }
-
-/* Adjust Project Card Styling */
 
 
 /* Experience Section */

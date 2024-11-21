@@ -6,3 +6,12 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
       });
   });
 });
+function flipCard(button) {
+  const card = button.closest('.project-card'); // Select the closest project card
+  const cardInner = card.querySelector('.card-inner');
+  if (cardInner.classList.contains('flipped')) {
+    cardInner.classList.remove('flipped');
+  } else {
+    cardInner.classList.add('flipped');
+  }
+}
