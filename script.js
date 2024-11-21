@@ -1,4 +1,4 @@
-// Smooth Scrolling for Navigation
+// Smooth scrolling for navigation
 document.querySelectorAll("nav a").forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -7,24 +7,14 @@ document.querySelectorAll("nav a").forEach(anchor => {
     });
   });
 });
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    card.querySelector(".card-front").style.transform = "rotateY(180deg)";
+    card.querySelector(".card-back").style.transform = "rotateY(0deg)";
+  });
 
-// Entry Animations for Sections
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.1
-  }
-);
-
-document.querySelectorAll("section").forEach(section => {
-  observer.observe(section);
-  section.classList.add("hidden");
+  card.addEventListener("mouseleave", () => {
+    card.querySelector(".card-front").style.transform = "rotateY(0deg)";
+    card.querySelector(".card-back").style.transform = "rotateY(180deg)";
+  });
 });
-
-// Add "visible" and "hidden" styles in CSS
