@@ -3,12 +3,12 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0;
   color: #007bff;
 }
@@ -22,7 +22,7 @@ a {
 header {
   background-color: #007bff;
   color: white;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -31,18 +31,19 @@ header {
 }
 
 header h1 {
-  margin: 0;
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header nav a {
   margin: 0 15px;
   font-weight: bold;
   color: white;
+  transition: color 0.3s;
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  color: #ffd700;
 }
 
 /* Section Styling */
@@ -72,6 +73,7 @@ header nav a:hover {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Skills Section */
@@ -90,6 +92,13 @@ header nav a:hover {
   font-weight: bold;
   text-transform: uppercase;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-card:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.1);
 }
 
 /* Projects Section */
@@ -145,21 +154,7 @@ header nav a:hover {
   margin-bottom: 1rem;
 }
 
-.card-front .btn {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.card-front .btn:hover {
-  background-color: #0056b3;
-}
-
-.flip-btn {
+.card-front .btn, .flip-btn {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background-color: #007bff;
@@ -167,11 +162,12 @@ header nav a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.flip-btn:hover {
+.card-front .btn:hover, .flip-btn:hover {
   background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 /* Experience Section */
@@ -188,6 +184,10 @@ header nav a:hover {
   font-size: 1.2rem;
 }
 
+.experience-list strong {
+  color: #007bff;
+}
+
 /* Certifications Section */
 .certifications-grid {
   display: grid;
@@ -199,10 +199,10 @@ header nav a:hover {
 .certification-card img {
   width: 150px;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 .certification-card p {
-  margin-top: 1rem;
   font-weight: bold;
 }
 
@@ -210,7 +210,8 @@ header nav a:hover {
 .blog-links {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .blog-links li {
@@ -222,9 +223,11 @@ header nav a:hover {
   color: #007bff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 .blog-links a:hover {
+  color: #0056b3;
   text-decoration: underline;
 }
 
@@ -252,4 +255,3 @@ footer {
   background-color: #f1f1f1;
   font-size: 0.9rem;
 }
-
