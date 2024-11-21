@@ -19,3 +19,11 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.querySelector('.card-back').style.transform = 'rotateY(180deg)';
   });
 });
+function flipCard(button) {
+  const card = button.previousElementSibling; // Get the .card-inner element
+  if (card.style.transform === "rotateY(180deg)") {
+    card.style.transform = "rotateY(0deg)";
+  } else {
+    card.style.transform = "rotateY(180deg)";
+  }
+}
