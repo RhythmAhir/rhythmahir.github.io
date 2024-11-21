@@ -7,14 +7,3 @@ document.querySelectorAll("nav a").forEach(anchor => {
     });
   });
 });
-document.querySelectorAll(".project-card").forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    card.querySelector(".card-front").style.transform = "rotateY(180deg)";
-    card.querySelector(".card-back").style.transform = "rotateY(0deg)";
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.querySelector(".card-front").style.transform = "rotateY(0deg)";
-    card.querySelector(".card-back").style.transform = "rotateY(180deg)";
-  });
-});
