@@ -8,3 +8,8 @@ document.querySelectorAll("nav a").forEach((link) => {
     });
   });
 });
+// Flip card functionality
+function flipCard(button) {
+  const card = button.closest('.project-card');
+  card.classList.toggle('flipped');
+}
