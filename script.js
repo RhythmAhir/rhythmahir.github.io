@@ -11,5 +11,13 @@ document.querySelectorAll("nav a").forEach((link) => {
 // Flip card functionality
 function flipCard(button) {
   const card = button.closest('.project-card');
-  card.classList.toggle('flipped');
+  const cardInner = card.querySelector('.card-inner');
+
+  if (card.classList.contains('flipped')) {
+    card.classList.remove('flipped');
+    cardInner.style.transform = 'rotateY(0deg)';
+  } else {
+    card.classList.add('flipped');
+    cardInner.style.transform = 'rotateY(180deg)';
+  }
 }
