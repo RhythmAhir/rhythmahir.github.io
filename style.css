@@ -116,24 +116,24 @@ header nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   justify-content: center;
-  padding: 3rem 1.5rem;
+  padding: 2rem;
 }
 
 .project-card {
-  width: 100%;
-  max-width: 360px;
-  height: 500px;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: 460px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   perspective: 1000px;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-inner {
@@ -161,21 +161,21 @@ header nav a:hover {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .card-front {
-  background: #f9f9f9;
+  background: #f8f9fa;
   text-align: center;
 }
 
 .card-front img {
-  width: 100px;
+  width: 80px;
   margin-bottom: 1rem;
 }
 
 .card-front h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #007bff;
   margin-bottom: 0.5rem;
 }
@@ -187,17 +187,17 @@ header nav a:hover {
 }
 
 .card-front .btn {
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  background: #007bff;
   color: #ffffff;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   font-size: 0.9rem;
-  border-radius: 8px;
+  border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .card-front .btn:hover {
-  background: linear-gradient(135deg, #0056b3, #003f8c);
+  background: #0056b3;
   transform: scale(1.05);
 }
 
@@ -205,7 +205,6 @@ header nav a:hover {
   background: #ffffff;
   transform: rotateY(180deg);
   text-align: center;
-  padding: 25px;
 }
 
 .card-back p {
@@ -215,11 +214,11 @@ header nav a:hover {
 
 .flip-btn {
   margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   background: #007bff;
   color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
 }
