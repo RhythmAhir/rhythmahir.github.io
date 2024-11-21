@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="header-container">
       <h1>Rhythm's Portfolio</h1>
@@ -27,11 +28,9 @@
   <section id="about" class="section">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="images/your-photo.jpg" alt="Your Picture">
+      <img src="images/your-photo.jpg" alt="Your Picture" class="profile-pic">
       <p>
         Hello! I'm Rhythm, a Data Scientist passionate about machine learning, generative AI, and data visualization. I create impactful solutions by combining innovative techniques with practical applications. I thrive on solving real-world problems with data-driven insights and scalable models.
-        <br><br>
-        I enjoy working on projects that bridge the gap between data and decision-making, ensuring organizations achieve measurable results.
       </p>
     </div>
   </section>
@@ -40,12 +39,12 @@
   <section id="skills" class="section">
     <h2>Skills</h2>
     <div class="skills-container">
-      <div class="skill">Python</div>
-      <div class="skill">TensorFlow</div>
-      <div class="skill">AWS</div>
-      <div class="skill">Generative AI</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Data Visualization</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">TensorFlow</div>
+      <div class="skill-card">AWS</div>
+      <div class="skill-card">Generative AI</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Data Visualization</div>
     </div>
   </section>
 
@@ -53,7 +52,7 @@
   <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="projects-container">
-      <!-- Row 1 -->
+      <!-- Project Card 1 -->
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
@@ -71,6 +70,7 @@
         <button class="flip-button" onclick="flipCard(this)">Flip</button>
       </div>
 
+      <!-- Project Card 2 -->
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
@@ -88,6 +88,7 @@
         <button class="flip-button" onclick="flipCard(this)">Flip</button>
       </div>
 
+      <!-- Project Card 3 -->
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
@@ -105,7 +106,7 @@
         <button class="flip-button" onclick="flipCard(this)">Flip</button>
       </div>
 
-      <!-- Row 2 -->
+      <!-- Project Card 4 -->
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
@@ -123,6 +124,7 @@
         <button class="flip-button" onclick="flipCard(this)">Flip</button>
       </div>
 
+      <!-- Project Card 5 -->
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
@@ -140,6 +142,7 @@
         <button class="flip-button" onclick="flipCard(this)">Flip</button>
       </div>
 
+      <!-- Project Card 6 -->
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
@@ -174,11 +177,11 @@
     <h2>Certifications</h2>
     <div class="certifications-container">
       <div class="certification">
-        <img src="images/cert1.jpg" alt="Certification 1">
+        <img src="images/cert1.jpg" alt="AWS Certification">
         <p>AWS Certified AI Practitioner</p>
       </div>
       <div class="certification">
-        <img src="images/cert1.jpg" alt="Certification 1">
+        <img src="images/cert2.jpg" alt="Machine Learning Certification">
         <p>Machine Learning Certification</p>
       </div>
     </div>
@@ -187,9 +190,9 @@
   <!-- Blog Section -->
   <section id="blog" class="section">
     <h2>Blog</h2>
-    <ul>
-      <li><a href="https://medium.com/@DataExplorerUSA">Understanding Generative AI</a></li>
-      <li><a href="https://medium.com/@DataExplorerUSA">Machine Learning in Practice</a></li>
+    <ul class="blog-links">
+      <li><a href="https://medium.com/@DataExplorerUSA"><i class="fas fa-book"></i> Understanding Generative AI</a></li>
+      <li><a href="https://medium.com/@DataExplorerUSA"><i class="fas fa-book"></i> Machine Learning in Practice</a></li>
     </ul>
   </section>
 
@@ -203,6 +206,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Rhythm. All Rights Reserved.</p>
   </footer>
