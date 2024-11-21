@@ -113,19 +113,23 @@ header nav a:hover {
 /* Projects Section Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 2rem; /* Space between cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible layout */
+  gap: 1.5rem; /* Space between cards */
   justify-items: center; /* Center align each card */
+  max-width: 1200px; /* Restrict the grid width */
+  margin: 0 auto; /* Center the grid horizontally */
 }
 
 /* Individual Project Card */
 .project-card {
-  width: 340px; /* Slightly larger width */
-  height: 450px; /* Slightly larger height */
+  width: 100%; /* Ensure cards adapt to grid column width */
+  max-width: 340px; /* Limit maximum width of the cards */
+  height: 450px; /* Set consistent card height */
   perspective: 1000px; /* Enable 3D effect for flipping */
   position: relative;
   text-align: center;
   padding: 1rem; /* Padding around the card */
+  box-sizing: border-box; /* Include padding in width/height */
 }
 
 /* Inner Card (for flipping effect) */
@@ -158,6 +162,7 @@ header nav a:hover {
   align-items: center; /* Center content horizontally */
   background-color: white; /* Card background */
   padding: 1rem; /* Inner spacing */
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
 }
 
 /* Back of Card */
