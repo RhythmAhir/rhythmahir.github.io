@@ -113,27 +113,28 @@ header nav a:hover {
 /* Projects Section */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .project-card {
-  position: relative;
   width: 100%;
   max-width: 340px;
   height: 460px;
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   perspective: 1000px;
+  margin: auto;
+  position: relative;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-inner {
@@ -161,11 +162,11 @@ header nav a:hover {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .card-front {
-  background: #f8f9fa;
+  background: #f9f9f9;
   text-align: center;
 }
 
@@ -187,17 +188,17 @@ header nav a:hover {
 }
 
 .card-front .btn {
-  background: #007bff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: #ffffff;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.5rem;
   font-size: 0.9rem;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .card-front .btn:hover {
-  background: #0056b3;
+  background: linear-gradient(135deg, #0056b3, #003f8c);
   transform: scale(1.05);
 }
 
@@ -214,11 +215,11 @@ header nav a:hover {
 
 .flip-btn {
   margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.5rem;
   background: #007bff;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
 }
