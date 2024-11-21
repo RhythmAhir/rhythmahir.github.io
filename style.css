@@ -48,9 +48,9 @@ header nav a:hover {
 
 /* Section Styling */
 .section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 2rem 2rem; /* Reduce top and bottom padding for sections */
+  margin-bottom: 1.5rem; /* Reduce the gap between sections */
+margin: 0 auto;
   text-align: center;
 }
 
@@ -66,6 +66,9 @@ header nav a:hover {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  margin: 0 auto; /* Ensure the content is centered */
+  padding: 1.5rem; /* Reduce internal padding */
+  max-width: 1200px; /* Maintain consistent section width */
 }
 
 /* About Section */
