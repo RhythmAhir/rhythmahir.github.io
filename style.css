@@ -113,28 +113,29 @@ header nav a:hover {
 /* Projects Section */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexible grid for responsiveness */
+  gap: 2rem; /* More space between project cards */
   justify-items: center;
-  margin: 2rem 0;
+  margin: 3rem auto; /* Adds spacing around the section */
+  padding: 1rem; /* Adds padding to the grid */
+  max-width: 1200px; /* Centers the grid and keeps it aligned */
 }
 
 .project-card {
   width: 100%;
-  max-width: 320px;
-  height: 400px;
+  max-width: 340px; /* Slightly wider cards */
+  height: 420px; /* Adjusted height for better content alignment */
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Softer corners for a modern look */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  perspective: 1000px;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px); /* Lifts the card slightly on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .card-inner {
@@ -157,7 +158,7 @@ header nav a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,11 +168,11 @@ header nav a:hover {
 }
 
 .card-front {
-  background: #f8f9fa;
+  background: #f5f5f5; /* Light grey background for modern look */
 }
 
 .card-front img {
-  width: 80px;
+  width: 60px; /* Smaller image for balance */
   height: auto;
   margin-bottom: 1rem;
 }
@@ -183,15 +184,16 @@ header nav a:hover {
 }
 
 .card-front p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #555;
   margin-bottom: 1rem;
   text-align: center;
+  line-height: 1.5; /* Improves readability */
 }
 
 .card-front .btn {
-  padding: 0.5rem 1.2rem;
-  font-size: 0.9rem;
+  padding: 0.6rem 1.4rem; /* Larger button for better click area */
+  font-size: 0.95rem;
   font-weight: bold;
   color: #ffffff;
   background: #007bff;
@@ -207,7 +209,7 @@ header nav a:hover {
 }
 
 .card-back {
-  background: #ffffff;
+  background: #ffffff; /* White background for contrast */
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
@@ -219,12 +221,13 @@ header nav a:hover {
 .card-back p {
   font-size: 1rem;
   color: #333;
+  line-height: 1.5; /* Improves readability */
 }
 
 .flip-btn {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem; /* Adjusted size for consistency */
+  font-size: 0.95rem;
   color: #ffffff;
   background: #007bff;
   border: none;
@@ -238,6 +241,14 @@ header nav a:hover {
   transform: scale(1.05);
 }
 
+/* Section Spacing */
+.section-box {
+  padding: 2rem; /* Adds padding to section box */
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem; /* Spacing between sections */
+}
 
 /* Experience Section */
 .experience-list {
