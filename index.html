@@ -1,103 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhythm's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhythm's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Rhythm's Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills & Tools</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#blog">Technical Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <h1>Rhythm's Portfolio</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <div class="content">
-            <img src="your-image.jpg" alt="Your Picture">
-            <p>
-                Hi! I'm Rhythm, a data scientist with expertise in machine learning, generative AI, and Web3 technologies. 
-                I love solving complex problems and creating innovative solutions. Welcome to my portfolio!
-            </p>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="section-box">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <img src="images/your-photo.jpg" alt="Your Picture" class="profile-pic">
+        <p>
+          Hello! I'm Rhythm, a Data Scientist passionate about machine learning, generative AI, and data visualization. I create impactful solutions by combining innovative techniques with practical applications. I thrive on solving real-world problems with data-driven insights and scalable models.
+          <br><br>
+          My journey is driven by a commitment to bridge the gap between raw data and meaningful insights, ensuring every project I undertake delivers measurable outcomes.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills" class="section">
-        <h2>Skills & Tools</h2>
-        <ul class="skills-list">
-            <li>Python</li>
-            <li>TensorFlow</li>
-            <li>PyTorch</li>
-            <li>AWS (SageMaker, Bedrock)</li>
-            <li>SQL</li>
-            <li>Data Visualization</li>
-        </ul>
-    </section>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="section-box">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">TensorFlow</div>
+        <div class="skill-card">AWS</div>
+        <div class="skill-card">Generative AI</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">Data Visualization</div>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of the project.</p>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="section-box">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project1.jpg" alt="Project 1">
+              <h3>Project 1</h3>
+              <p>Built an end-to-end predictive analytics system for financial forecasting.</p>
+              <a href="https://github.com/your-repo1" target="_blank" class="btn">View on GitHub</a>
             </div>
-            <div class="project">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of the project.</p>
+            <div class="card-back">
+              <p>This project leveraged machine learning algorithms to forecast financial trends effectively.</p>
             </div>
-            <!-- Add more projects similarly -->
+          </div>
+          <button class="flip-btn" onclick="flipCard(this)">Flip</button>
         </div>
-    </section>
 
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>AI Teaching Assistant</strong> at 2U (2024)</li>
-            <li><strong>Data Scientist</strong> at Brick City Capital (2023)</li>
-            <li><strong>ML Researcher</strong> at Ironside (2022)</li>
-        </ul>
-    </section>
-
-    <section id="certifications" class="section">
-        <h2>Certifications</h2>
-        <div class="certifications-grid">
-            <img src="cert1.jpg" alt="AWS Certified AI Practitioner">
-            <img src="cert2.jpg" alt="Certification 2">
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project2.jpg" alt="Project 2">
+              <h3>Project 2</h3>
+              <p>Developed a generative AI-powered text summarization tool.</p>
+              <a href="https://github.com/your-repo2" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="card-back">
+              <p>This tool condenses lengthy documents into concise summaries using NLP techniques.</p>
+            </div>
+          </div>
+          <button class="flip-btn" onclick="flipCard(this)">Flip</button>
         </div>
-    </section>
 
-    <section id="blog" class="section">
-        <h2>Technical Blog</h2>
-        <p>Explore my technical writings on <a href="https://medium.com/@DataExplorerUSA" target="_blank">Medium</a>.</p>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Let's connect! Reach me at:</p>
-        <div class="contact-icons">
-            <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project3.jpg" alt="Project 3">
+              <h3>Project 3</h3>
+              <p>Designed a recommendation engine for e-commerce platforms.</p>
+              <a href="https://github.com/your-repo3" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="card-back">
+              <p>This recommendation system increased user engagement by 25%.</p>
+            </div>
+          </div>
+          <button class="flip-btn" onclick="flipCard(this)">Flip</button>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2024 Rhythm. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project4.jpg" alt="Project 4">
+              <h3>Project 4</h3>
+              <p>Created a real-time sentiment analysis tool for social media.</p>
+              <a href="https://github.com/your-repo4" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="card-back">
+              <p>This project helps businesses monitor brand reputation effectively in real time.</p>
+            </div>
+          </div>
+          <button class="flip-btn" onclick="flipCard(this)">Flip</button>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project5.jpg" alt="Project 5">
+              <h3>Project 5</h3>
+              <p>Built a chatbot for customer support using NLP techniques.</p>
+              <a href="https://github.com/your-repo5" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="card-back">
+              <p>This chatbot reduced response times by 40%, improving customer satisfaction.</p>
+            </div>
+          </div>
+          <button class="flip-btn" onclick="flipCard(this)">Flip</button>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project6.jpg" alt="Project 6">
+              <h3>Project 6</h3>
+              <p>Automated a data cleaning pipeline for a retail company.</p>
+              <a href="https://github.com/your-repo6" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="card-back">
+              <p>This solution saved 30% of data processing time and improved efficiency.</p>
+            </div>
+          </div>
+          <button class="flip-btn" onclick="flipCard(this)">Flip</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="section-box">
+      <h2>Experience</h2>
+      <ul class="experience-list">
+        <li><strong>Ironside:</strong> Innovated generative AI solutions, delivering scalable machine learning models for enterprise applications.</li>
+        <li><strong>Brick City Capital:</strong> Enhanced credit risk analytics by developing robust prediction models and dashboards.</li>
+        <li><strong>AI Teaching Assistant:</strong> Mentored students in AI concepts, focusing on real-world implementation and best practices.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <div class="section-box">
+      <h2>Certifications</h2>
+      <div class="certifications-grid">
+        <div class="certification-card">
+          <img src="images/cert1.jpg" alt="AWS Certification">
+          <p>AWS Certified AI Practitioner</p>
+        </div>
+        <div class="certification-card">
+          <img src="images/cert2.jpg" alt="Machine Learning Certification">
+          <p>Machine Learning Certification</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section">
+    <div class="section-box">
+      <h2>Blog</h2>
+      <ul class="blog-links">
+        <li><a href="https://medium.com/@DataExplorerUSA"><i class="fas fa-book"></i> Understanding Generative AI</a></li>
+        <li><a href="https://medium.com/@DataExplorerUSA"><i class="fas fa-book"></i> Machine Learning in Practice</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="section-box">
+      <h2>Contact</h2>
+      <div class="contact-icons">
+        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/your-profile"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/your-profile"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Rhythm. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
