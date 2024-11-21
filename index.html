@@ -54,35 +54,42 @@
       <h2>Projects</h2>
       <div class="projects-container">
         <div class="project-card">
-          <div class="card-front">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project1.jpg" alt="Project 1">
+              <h3>Project 1</h3>
+              <button class="github-button" onclick="window.open('https://github.com/your-repo', '_blank')">View on GitHub</button>
+            </div>
+            <div class="card-back">
+              <h3>Project 1</h3>
+              <p>
+                Built an end-to-end predictive analytics system for financial forecasting, leveraging machine learning and visualization tools.
+              </p>
+            </div>
           </div>
-          <div class="card-back">
-            <h3>Project 1</h3>
-            <p>
-              Built an end-to-end predictive analytics system for financial forecasting, leveraging machine learning and visualization tools.
-            </p>
-          </div>
+          <button class="flip-button" onclick="flipCard(this)">Flip</button>
         </div>
         <div class="project-card">
-          <div class="card-front">
-            <img src="images/project2.jpg" alt="Project 2">
-            <h3>Project 2</h3>
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/project2.jpg" alt="Project 2">
+              <h3>Project 2</h3>
+              <button class="github-button" onclick="window.open('https://github.com/your-repo2', '_blank')">View on GitHub</button>
+            </div>
+            <div class="card-back">
+              <h3>Project 2</h3>
+              <p>
+                Developed a generative AI-powered text summarization tool, capable of condensing complex documents into concise summaries.
+              </p>
+            </div>
           </div>
-          <div class="card-back">
-            <h3>Project 2</h3>
-            <p>
-              Developed a generative AI-powered text summarization tool, capable of condensing complex documents into concise summaries.
-            </p>
-          </div>
+          <button class="flip-button" onclick="flipCard(this)">Flip</button>
         </div>
-        <!-- Add additional project cards as needed -->
+        <!-- Add more projects as needed -->
       </div>
     </div>
   </section>
-  
-  
+    
 
   <section id="experience">
     <div class="section-box section-lightyellow">

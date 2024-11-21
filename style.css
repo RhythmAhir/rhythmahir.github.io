@@ -115,57 +115,92 @@ header nav a:hover {
 /* Projects Section */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   justify-content: center;
 }
 
 .project-card {
-  width: 100%;
-  height: 400px;
-  perspective: 1000px; /* Enable 3D effect */
   position: relative;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.project-card .card-front,
-.project-card .card-back {
+.card-inner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.card-front,
+.card-back {
   width: 100%;
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.6s ease-in-out;
 }
 
-.project-card .card-front {
+.card-front {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-.project-card .card-front img {
+.card-front img {
   width: 100%;
-  height: 70%;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
-.project-card .card-back {
+.card-front h3 {
+  margin: 0.5rem 0;
+}
+
+.github-button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #0056b3;
+}
+
+.card-back {
   background-color: #f8f9fa;
   color: #333333;
   padding: 1rem;
   text-align: center;
   transform: rotateY(180deg);
-  border-radius: 10px;
 }
 
-.project-card:hover .card-front {
-  transform: rotateY(180deg);
+.flip-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
-.project-card:hover .card-back {
-  transform: rotateY(0deg);
+.flip-button:hover {
+  background-color: #218838;
 }
