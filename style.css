@@ -3,14 +3,12 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
   color: #333333;
   line-height: 1.6;
 }
 
-/* Header */
 header {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -39,52 +37,44 @@ header nav a:hover {
 
 /* Section Styling */
 .section-block {
-  background-color: #f8f9fa;
   padding: 2rem;
   margin: 2rem auto;
   border-radius: 10px;
+  color: #333333;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* About Section */
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.section-block:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.about-container img {
-  width: 150px;
-  border-radius: 50%;
-  border: 3px solid #007bff;
+.section-lightblue {
+  background-color: #e7f3ff;
 }
 
-/* Skills */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+.section-lightgray {
+  background-color: #f7f7f7;
 }
 
-.skill {
-  background-color: #007bff;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
+.section-lightgreen {
+  background-color: #e9f7e1;
 }
 
-/* Projects */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.section-lightyellow {
+  background-color: #fff9e6;
 }
 
+.section-lightpurple {
+  background-color: #f7e9ff;
+}
+
+.section-lightpink {
+  background-color: #ffe9f3;
+}
+
+/* Projects Flip Cards */
 .project-card {
   width: 300px;
   height: 400px;
@@ -102,11 +92,12 @@ header nav a:hover {
 }
 
 .project-card .card-front {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-card .card-front img {
@@ -122,7 +113,7 @@ header nav a:hover {
   padding: 1rem;
   text-align: center;
   transform: rotateY(180deg);
-  border: 1px solid #e3e6ea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover .card-front {
