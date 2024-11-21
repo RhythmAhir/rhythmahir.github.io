@@ -122,7 +122,7 @@ header nav a:hover {
 
 .project-card {
   position: relative;
-  perspective: 1000px;
+  perspective: 1000px; /* Enable 3D effect */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,6 +133,7 @@ header nav a:hover {
   height: 300px;
   position: relative;
   transform-style: preserve-3d;
+  transform: rotateY(0deg); /* Default state */
   transition: transform 0.6s ease-in-out;
 }
 
@@ -167,18 +168,21 @@ header nav a:hover {
 }
 
 .github-button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   background-color: #007bff;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .github-button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .card-back {
@@ -187,20 +191,24 @@ header nav a:hover {
   padding: 1rem;
   text-align: center;
   transform: rotateY(180deg);
+  border-radius: 10px;
 }
 
 .flip-button {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   background-color: #28a745;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .flip-button:hover {
   background-color: #218838;
+  transform: scale(1.05);
 }
