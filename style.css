@@ -250,6 +250,60 @@ header nav a:hover {
   margin-bottom: 2rem; /* Spacing between sections */
 }
 
+/* Enhanced Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 2.5rem; /* Adjusted gap between cards */
+  justify-items: center;
+  margin: 3rem auto;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 320px;
+  height: 440px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-front p,
+.card-back p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6; /* Better readability */
+  text-align: center;
+}
+
+.card-front img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.flip-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.flip-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
 /* Experience Section */
 .experience-list {
   text-align: left;
