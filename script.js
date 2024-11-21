@@ -8,6 +8,3 @@ document.querySelectorAll("nav a").forEach((link) => {
     });
   });
 });
-
-// Placeholder for future interactive features
-console.log("Portfolio loaded successfully!");

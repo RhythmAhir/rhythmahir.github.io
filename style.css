@@ -53,6 +53,11 @@ header nav a:hover {
   text-align: center;
 }
 
+/* Alternate Section Backgrounds */
+#skills, #certifications {
+  background-color: #f1f1f1;
+}
+
 /* About Section */
 .about-grid {
   display: grid;
@@ -80,7 +85,7 @@ header nav a:hover {
   background-color: #007bff;
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 20px;
   text-align: center;
   font-weight: bold;
   font-size: 1rem;
@@ -88,7 +93,8 @@ header nav a:hover {
 }
 
 .skill-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Projects Section */
@@ -154,9 +160,16 @@ header nav a:hover {
 .experience-list li {
   margin-bottom: 1rem;
   font-size: 1rem;
+  position: relative;
+  padding-left: 20px;
 }
 
-.experience-list li strong {
+.experience-list li:before {
+  content: '\f0b1'; /* FontAwesome briefcase icon */
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  left: 0;
+  font-weight: 900;
   color: #007bff;
 }
 
@@ -170,6 +183,10 @@ header nav a:hover {
 
 .certification-card {
   text-align: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .certification-card img {
@@ -226,6 +243,7 @@ header nav a:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #f1f1f1;
+  background: #333;
+  color: white;
   font-size: 0.9rem;
 }
