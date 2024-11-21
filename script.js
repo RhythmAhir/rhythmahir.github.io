@@ -7,8 +7,9 @@ document.querySelectorAll("nav a").forEach(anchor => {
     });
   });
 });
+
 function flipCard(button) {
-  const cardInner = button.previousElementSibling; // Get the .card-inner element
+  const cardInner = button.previousElementSibling;
   if (cardInner.style.transform === "rotateY(180deg)") {
     cardInner.style.transform = "rotateY(0deg)";
   } else {

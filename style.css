@@ -3,22 +3,20 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Light Background */
-  color: #333333; /* Dark Text */
-  line-height: 1.6;
-  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
   padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
-  color: #007bff; /* Blue */
 }
 
 header nav {
@@ -26,58 +24,38 @@ header nav {
 }
 
 header nav a {
-  margin: 0 15px;
-  color: #007bff;
+  color: white;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  color: #0056b3;
+  text-decoration: underline;
 }
 
-/* Section Boxes */
-.section-box {
-  background-color: #ffffff; /* Default White Background */
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 900px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.section {
+  padding: 4rem 2rem;
 }
 
-.section-box:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
 }
 
-.section-lightblue {
-  background-color: #e7f3ff;
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.section-lightgray {
-  background-color: #f8f9fa;
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
-.section-lightgreen {
-  background-color: #eaf7e3;
-}
-
-.section-lightyellow {
-  background-color: #fffbea;
-}
-
-.section-lightpurple {
-  background-color: #f5e6ff;
-}
-
-.section-lightpink {
-  background-color: #ffe9f1;
-}
-
-/* Skills */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -87,32 +65,12 @@ header nav a:hover {
 
 .skill {
   background-color: #007bff;
-  color: #ffffff;
-  padding: 0.5rem 1.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
 }
 
-.skill:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
-}
-
-/* Contact Icons */
-.contact-icons a {
-  margin: 0 15px;
-  color: #007bff;
-  font-size: 2rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.contact-icons a:hover {
-  color: #0056b3;
-  transform: scale(1.2);
-}
-
-/* Projects Section */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -121,94 +79,50 @@ header nav a:hover {
 }
 
 .project-card {
-  position: relative;
-  perspective: 1000px; /* Enable 3D effect */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  perspective: 1000px;
 }
 
 .card-inner {
+  position: relative;
   width: 100%;
   height: 300px;
-  position: relative;
   transform-style: preserve-3d;
-  transform: rotateY(0deg); /* Default state */
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s;
 }
 
-.card-front,
-.card-back {
+.card-front, .card-back {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
   backface-visibility: hidden;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-front {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-.card-front img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-
-.card-front h3 {
-  margin: 0.5rem 0;
-}
-
-.github-button {
-  padding: 0.5rem 1.2rem;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.github-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background-color: white;
 }
 
 .card-back {
-  background-color: #f8f9fa;
-  color: #333333;
-  padding: 1rem;
-  text-align: center;
+  background-color: #f1f1f1;
   transform: rotateY(180deg);
-  border-radius: 10px;
 }
 
-.flip-button {
-  margin-top: 1rem;
-  padding: 0.5rem 1.2rem;
-  background-color: #28a745;
-  color: #ffffff;
+.flip-button, .github-button {
+  background-color: #007bff;
+  color: white;
   border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.flip-button:hover {
-  background-color: #218838;
-  transform: scale(1.05);
+.flip-button:hover, .github-button:hover {
+  background-color: #0056b3;
 }
