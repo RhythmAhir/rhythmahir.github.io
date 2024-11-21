@@ -1,15 +1,19 @@
-// Smooth scrolling for navigation
-document.querySelectorAll("nav a").forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
+// Placeholder for future functionality or interactivity
+// Example: Scroll-to-section functionality for smoother transitions
+
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+    const targetId = e.target.getAttribute("href").substring(1);
+    document.getElementById(targetId).scrollIntoView({
+      behavior: "smooth",
     });
   });
 });
 
-function flipCard(button) {
-  const cardInner = button.previousElementSibling;
+// Flip card functionality if needed in the future
+function flipCard(card) {
+  const cardInner = card.querySelector('.card-inner');
   if (cardInner.style.transform === "rotateY(180deg)") {
     cardInner.style.transform = "rotateY(0deg)";
   } else {

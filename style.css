@@ -1,74 +1,231 @@
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+/* Header */
 header {
-  background: #007bff;
-  color: #fff;
-  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
 header nav {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 header nav a {
-  color: #fff;
-  margin: 0 1rem;
+  color: white;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
 }
 
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styling */
 .section {
-  padding: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007bff;
   text-align: center;
 }
 
-.projects-container {
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.skill-card {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+/* Projects Section */
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
 }
 
 .project-card {
-  position: relative;
-  perspective: 1000px;
-}
-
-.card-inner {
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  width: 100%;
-  height: 250px;
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-
-.card-front {
   background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.card-back {
-  background: #f9f9f9;
-  transform: rotateY(180deg);
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-button.flip-button {
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.project-card .btn {
+  display: inline-block;
   margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.project-card .btn:hover {
+  background: #0056b3;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Experience Section */
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.experience-list li strong {
+  color: #007bff;
+}
+
+/* Certifications Section */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.certification-card {
+  text-align: center;
+}
+
+.certification-card img {
+  width: 150px;
+  height: auto;
+}
+
+.certification-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Blog Section */
+.blog-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.blog-links li {
+  margin: 0.5rem 0;
+}
+
+.blog-links li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.blog-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  font-size: 1.5rem;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f1f1f1;
+  font-size: 0.9rem;
 }
