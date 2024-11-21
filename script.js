@@ -15,9 +15,7 @@ function flipCard(button) {
 
   if (card.classList.contains('flipped')) {
     card.classList.remove('flipped');
-    cardInner.style.transform = 'rotateY(0deg)';
   } else {
     card.classList.add('flipped');
-    cardInner.style.transform = 'rotateY(180deg)';
   }
 }
