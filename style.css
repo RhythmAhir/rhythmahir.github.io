@@ -4,13 +4,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff; /* White Background */
-  color: #333333; /* Dark Text */
+  color: #333333; /* Dark Gray Text */
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: #f8f9fa; /* Light Gray */
+  background-color: #f1f1f1; /* Light Gray */
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
