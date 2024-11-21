@@ -12,7 +12,7 @@ body {
 header {
   background-color: #007bff;
   color: white;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
   position: sticky;
   top: 0;
@@ -21,11 +21,11 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 header nav {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 header nav a {
@@ -41,21 +41,20 @@ header nav a:hover {
 
 /* Section Styling */
 .section {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
   color: #007bff;
-  text-align: center;
-}
-
-/* Alternate Section Backgrounds */
-#skills, #certifications {
-  background-color: #f1f1f1;
+  margin-bottom: 1.5rem;
 }
 
 /* About Section */
@@ -84,17 +83,16 @@ header nav a:hover {
 .skill-card {
   background-color: #007bff;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 20px;
-  text-align: center;
+  font-size: 1.1rem;
   font-weight: bold;
-  font-size: 1rem;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Projects Section */
@@ -102,15 +100,15 @@ header nav a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  padding: 1rem;
 }
 
 .project-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card img {
@@ -122,50 +120,55 @@ header nav a:hover {
 
 .project-card h3 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #007bff;
 }
 
 .project-card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #555;
+  margin-bottom: 1rem;
 }
 
 .project-card .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #007bff;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
   color: white;
   text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .project-card .btn:hover {
-  background: #0056b3;
+  background-color: #0056b3;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Experience Section */
 .experience-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
 }
 
 .experience-list li {
+  font-size: 1.1rem;
   margin-bottom: 1rem;
-  font-size: 1rem;
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .experience-list li:before {
-  content: '\f0b1'; /* FontAwesome briefcase icon */
+  content: '\f0b1'; /* FontAwesome icon */
   font-family: 'Font Awesome 5 Free';
   position: absolute;
   left: 0;
@@ -176,45 +179,46 @@ header nav a:hover {
 /* Certifications Section */
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   justify-items: center;
 }
 
 .certification-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .certification-card img {
-  width: 150px;
+  width: 100px;
   height: auto;
 }
 
 .certification-card p {
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #555;
 }
 
 /* Blog Section */
 .blog-links {
   list-style: none;
   padding: 0;
-  margin: 0;
   text-align: center;
 }
 
 .blog-links li {
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
 }
 
 .blog-links li a {
+  font-size: 1.2rem;
+  font-weight: bold;
   color: #007bff;
   text-decoration: none;
-  font-size: 1rem;
 }
 
 .blog-links li a:hover {
@@ -226,24 +230,25 @@ header nav a:hover {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
 }
 
 .contact-icons a {
-  font-size: 1.5rem;
   color: #007bff;
-  transition: color 0.3s;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-icons a:hover {
   color: #0056b3;
+  transform: scale(1.1);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
   background: #333;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
