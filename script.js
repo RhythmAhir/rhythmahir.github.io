@@ -1,15 +1,8 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll("nav a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const targetId = e.target.getAttribute("href").substring(1);
-    document.getElementById(targetId).scrollIntoView({
-      behavior: "smooth",
-    });
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
   });
 });
-// Flip card functionality
-function flipCard(button) {
-  const card = button.closest('.project-card');
-  card.classList.toggle('flipped');
-}
