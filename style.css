@@ -1,0 +1,192 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light Blue Background */
+    color: #333333; /* Dark Gray Text */
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #003366; /* Dark Blue */
+    color: #ffffff; /* White Text */
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header nav a {
+    color: #ffffff; /* White Links */
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  header nav a:hover {
+    color: #20C997; /* Teal Hover Effect */
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  section:nth-child(even) {
+    background-color: #e6f7ff; /* Light Blue for Alternating Sections */
+  }
+  
+  /* About Section */
+  .about-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .about-container img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .skills-container .skill {
+    background-color: #ffffff; /* White Background */
+    padding: 0.5rem 1rem;
+    border: 1px solid #20C997; /* Teal Border */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .skills-container .skill:hover {
+    background-color: #20C997; /* Teal Background on Hover */
+    color: #ffffff; /* White Text on Hover */
+  }
+  
+  /* Projects Section */
+  .projects-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .projects-container .project {
+    flex: 1 1 calc(33.333% - 1rem);
+    border: 1px solid #cccccc; /* Light Gray Border */
+    padding: 1rem;
+    text-align: center;
+    background-color: #ffffff; /* White Background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projects-container .project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .projects-container .project:hover {
+    transform: translateY(-5px); /* Lift Effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+  }
+  
+  /* Experience Section */
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  ul li:before {
+    content: "•";
+    color: #20C997; /* Teal Bullet */
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Certifications Section */
+  .certifications-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .certifications-container .certification {
+    flex: 1 1 calc(50% - 1rem);
+    border: 1px solid #cccccc; /* Light Gray Border */
+    padding: 1rem;
+    text-align: center;
+    background-color: #ffffff; /* White Background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certifications-container .certification img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .certifications-container .certification:hover {
+    transform: translateY(-5px); /* Lift Effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+  }
+  
+  /* Blog Section */
+  section#blog ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  section#blog ul li a {
+    color: #20C997; /* Teal Links */
+    text-decoration: none;
+  }
+  
+  section#blog ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Section */
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .contact-icons a {
+    font-size: 1.5rem;
+    color: #003366; /* Dark Blue */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-icons a:hover {
+    color: #20C997; /* Teal Hover Effect */
+    transform: scale(1.1); /* Slight Zoom */
+  }
+  
+  section#contact p {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #003366; /* Dark Blue */
+    color: #ffffff; /* White Text */
+    text-align: center;
+    padding: 1rem;
+  }
+  
