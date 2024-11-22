@@ -1,10 +1,10 @@
 /* Intro Section */
 .intro-section {
-  background: linear-gradient(135deg, #000, #444); /* Black gradient */
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
   color: white;
   text-align: center;
-  padding: 6rem 1rem;
-  box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.3);
+  padding: 6rem 1rem; /* Larger padding for emphasis */
+  box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for professionalism */
   animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -12,35 +12,35 @@
 .intro-container {
   max-width: 1200px;
   margin: 0 auto;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2); /* Subtle white shadow for clarity */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for text clarity */
 }
 
 /* Name Styling */
 .intro-section h1 {
-  font-size: 4rem;
+  font-size: 4rem; /* Larger font size for name */
   font-weight: bold;
   margin: 0 0 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  animation: slideIn 1.5s ease-in-out;
-  color: white; /* Consistent white text */
+  letter-spacing: 0.1em; /* Professional letter spacing */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  animation: slideIn 1.5s ease-in-out; /* Slide-in animation */
+  color:
 }
 
 /* Title Styling */
 .intro-section p {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Medium font size for title */
   margin: 0;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  animation: slideIn 2s ease-in-out;
+  gap: 0.5rem; /* Space between icons and text */
+  animation: slideIn 2s ease-in-out; /* Slide-in animation */
 }
 
 .intro-section p i {
-  font-size: 2rem;
-  color: #fff; /* White for contrast */
+  font-size: 2rem; /* Slightly larger icons */
+  color: #ffd700; /* Golden color for contrast */
 }
 
 /* Divider Styling */
@@ -49,7 +49,7 @@
   margin: 2rem auto;
   border: 0;
   height: 2px;
-  background: #fff; /* White divider line */
+  background: #ffd700; /* Golden divider line */
 }
 
 /* Fade-In Animation for Entire Section */
@@ -81,7 +81,7 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: #000;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 50%;
@@ -89,16 +89,16 @@
   height: 50px;
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
-  display: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden initially */
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 #backToTop:hover {
-  background-color: #444; /* Dark gray hover effect */
-  transform: scale(1.1);
+  background-color: #0056b3;
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 #backToTop i {
@@ -107,38 +107,39 @@
 
 /* Show Back to Top Button */
 #backToTop.show {
-  display: flex;
+  display: flex; /* Make button visible */
 }
+
 
 /* General Styling */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: white;
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
 }
 
 h1, h2, h3 {
   margin: 0;
-  color: white;
+  color: #007bff;
 }
 
 a {
   text-decoration: none;
-  color: white; /* White links */
+  color: inherit;
 }
 
 /* General Header Styles */
 header {
-  background-color: #000;
+  background-color: #007bff;
   color: white;
   padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -157,7 +158,7 @@ h1 {
 }
 
 nav {
-  flex-grow: 1;
+  flex-grow: 1; /* Allow nav to grow and take available space */
 }
 
 .nav-links {
@@ -182,12 +183,12 @@ nav {
 }
 
 .nav-links li a:hover {
-  color: #aaa; /* Light gray hover effect */
+  color: #ffd700;
 }
 
 /* Hamburger Menu Alignment */
 .hamburger {
-  display: none;
+  display: none; /* Hidden on larger screens */
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -195,8 +196,8 @@ nav {
   cursor: pointer;
   z-index: 1001;
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  left: 1rem; /* Position to the left */
+  top: 1rem; /* Ensure proper spacing from the top */
 }
 
 /* Responsive Styles for Mobile */
@@ -206,28 +207,28 @@ nav {
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #000;
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links vertically */
+    background-color: #007bff;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     padding: 1rem;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; /* Show menu when active */
   }
 
   .nav-links li {
-    text-align: left;
+    text-align: left; /* Left-align links */
     margin: 0.5rem 0;
   }
 
   .hamburger {
-    display: block;
+    display: block; /* Show hamburger menu on mobile */
   }
 }
 
@@ -242,15 +243,14 @@ nav {
 .section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: white;
 }
 
 /* Section Box */
 .section-box {
-  background: #111; /* Dark gray background */
+  background: white;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   padding: 1.5rem;
   max-width: 1200px;
@@ -262,32 +262,33 @@ nav {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
-  align-items: center;
-  margin-top: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  list-style: none;
-  padding: 0;
+  align-items: center; /* Align items vertically */
+  margin-top: 2rem; /* Add spacing above the grid */
+  max-width: 800px; /* Restrict grid width */
+  margin: 0 auto; /* Center the grid */
+  text-align: left; /* Align text to the left in the text column */
+  list-style: none; /* Ensure no bullets for lists */
+  padding: 0; /* Remove extra padding */
 }
 
 /* Center Image and Button */
 .about-image-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Stack image and button vertically */
+  align-items: center; /* Center align both horizontally and vertically */
+  justify-content: center; /* Ensure content is fully centered */
 }
 
 /* Profile Picture */
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure image doesn't stretch */
+  margin-bottom: 1rem; /* Space below the image */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
 
 /* Skills Section */
 .skills-grid {
@@ -300,39 +301,40 @@ nav {
 .skill-card {
   padding: 1rem 2rem;
   border-radius: 5px;
-  background-color: #222; /* Black-gray background */
-  color: white;
+  background-color: #eaf4ff;
+  color: #007bff;
   font-weight: bold;
   text-transform: uppercase;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .skill-card:hover {
-  background-color: #444;
+  background-color: #007bff;
+  color: white;
   transform: scale(1.1);
 }
 
 /* Projects Section Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minimum card width */
+  gap: 1.5rem; /* Maintain spacing between cards */
   justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px; /* Restrict the grid width */
+  margin: 0 auto; /* Center the grid */
 }
 
 /* Individual Project Card */
 .project-card {
   width: 100%;
-  max-width: 400px;
-  height: 450px;
-  perspective: 1000px;
+  max-width: 400px; /* Increased width */
+  height: 450px; /* Maintain consistent height */
+  perspective: 1000px; /* Enable 3D effect for flipping */
   position: relative;
   text-align: center;
-  padding: 1rem;
-  box-sizing: border-box;
+  padding: 1rem; /* Maintain padding */
+  box-sizing: border-box; /* Include padding in dimensions */
 }
 
 /* Inner Card (for flipping effect) */
@@ -357,15 +359,14 @@ nav {
   left: 0;
   border-radius: 10px;
   backface-visibility: hidden;
-  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack content vertically */
   justify-content: center;
   align-items: center;
-  background-color: #222;
-  color: white;
+  background-color: white;
   padding: 1rem;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding in width/height */
 }
 
 .card-back {
@@ -374,16 +375,17 @@ nav {
 
 /* Front Content */
 .card-front img {
-  width: 75%;
+  width: 75%; /* Adjust image size */
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Space below image */
 }
 
+/* GitHub Button */
 .card-front .btn {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Add space below GitHub button */
   padding: 0.5rem 1rem;
-  background-color: #000;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -392,36 +394,175 @@ nav {
 }
 
 .card-front .btn:hover {
-  background-color: #444;
+  background-color: #0056b3;
   transform: scale(1.1);
 }
 
 /* Rotate (Flip) Button */
 .flip-btn {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; /* Space between GitHub button and Flip button */
   padding: 0.4rem 1rem;
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  color: #007bff;
+  border: 1px solid #007bff;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
+.flip-btn i {
+  font-size: 1.2rem;
+}
+
 .flip-btn:hover {
-  background-color: white;
-  color: #000;
+  background-color: #007bff;
+  color: white;
   transform: scale(1.1);
+}
+
+/* Experience Section */
+.experience-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.experience-list li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.experience-list strong {
+  color: #007bff;
+}
+
+/* Education Section */
+.education-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.education-list li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.education-list strong {
+  color: #007bff;
+}
+
+
+/* Certifications Section */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.certification-card img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.certification-card p {
+  font-weight: bold;
+}
+
+/* Blog Section */
+#blog {
+  text-align: center;
+  padding: 2rem 1rem;
+ }
+
+#blog h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+#blog p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.blog-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.highlight {
+  flex: 1 1 calc(30% - 1rem);
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.highlight h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.highlight p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Contact Section */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-icons a {
+  font-size: 2rem;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #0056b3;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem 0;
-  background-color: #222;
+  background-color: #f1f1f1;
   font-size: 0.9rem;
-  color: white;
 }
 
 /* Media Queries */
