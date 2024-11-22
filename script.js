@@ -31,3 +31,23 @@ navLinksItems.forEach(link => {
     navLinks.classList.remove('active');
   });
 });
+
+// Back to Top Button Logic
+const backToTopButton = document.getElementById('backToTop');
+
+// Show button when scrolled down
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
+
+// Scroll to top on button click
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

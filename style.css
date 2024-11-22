@@ -1,51 +1,47 @@
 /* Intro Section */
 .intro-section {
-  background: #white;
-  color: white; /* Text in white for contrast */
+  background: url('images/background.jpg') center/cover no-repeat, 
+              linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)); 
+  color: white;
   text-align: center;
-  padding: 4rem 1rem; /* More spacing for a bold look */
+  padding: 5rem 1rem; /* More spacing for a bold look */
   animation: fadeIn 1.5s ease-in-out; /* Subtle fade-in animation */
 }
 
-/* Center Container */
 .intro-container {
   max-width: 1200px;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto;
 }
 
-/* Name Styling */
 .intro-section h1 {
-  font-size: 3.5rem; /* Larger font size for your name */
+  font-size: 3.5rem; /* Larger font size for name */
   margin: 0 0 1rem; /* Space below the name */
   font-weight: bold;
-  letter-spacing: 0.05em; /* Slight letter spacing for elegance */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Shadow for readability */
 }
 
-/* Title Styling */
 .intro-section p {
   font-size: 1.6rem; /* Medium font size for title */
-  margin: 0; /* Remove default margins */
+  margin: 0;
   font-weight: 500;
-  letter-spacing: 0.05em;
   display: flex;
   justify-content: center; /* Center align icons and text */
-  align-items: center; /* Align icons vertically with text */
+  align-items: center; /* Align icons vertically */
   gap: 0.5rem; /* Space between icons and text */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-/* Icon Styling */
 .intro-section p i {
-  font-size: 1.6rem; /* Icon size matches the text */
-  color: #ffd700; /* Add contrast with a golden color */
+  font-size: 1.6rem; /* Icon size matches text */
+  color: #ffd700; /* Golden color for icons */
 }
 
 /* Fade-In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-20px); /* Slide up effect */
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -53,19 +49,38 @@
   }
 }
 
-@media (max-width: 768px) {
-  .intro-section h1 {
-    font-size: 2.5rem; /* Reduce font size for smaller screens */
-  }
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden initially */
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
-  .intro-section p {
-    font-size: 1.2rem; /* Adjust title font size */
-    gap: 0.3rem; /* Reduce spacing between icons and text */
-  }
+#backToTop:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Slight zoom on hover */
+}
 
-  .intro-section p i {
-    font-size: 1.3rem; /* Reduce icon size */
-  }
+#backToTop i {
+  font-size: 1.2rem;
+}
+
+/* Show Back to Top Button */
+#backToTop.show {
+  display: flex; /* Make button visible */
 }
 
 
