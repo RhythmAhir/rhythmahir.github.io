@@ -71,26 +71,38 @@ header nav a:hover {
 }
 
 /* About Section */
+/* About Grid */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
-  align-items: center;
-  margin-top: 2rem;
-  text-align: left;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
+  align-items: center; /* Align items vertically */
+  margin-top: 2rem; /* Add spacing above the grid */
+  max-width: 800px; /* Restrict grid width */
+  margin: 0 auto; /* Center the grid */
+  text-align: left; /* Align text to the left in the text column */
+  list-style: none; /* Ensure no bullets for lists */
+  padding: 0; /* Remove extra padding */
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* Center Image and Button */
+.about-image-container {
+  display: flex;
+  flex-direction: column; /* Stack image and button vertically */
+  align-items: center; /* Center align both horizontally and vertically */
+  justify-content: center; /* Ensure content is fully centered */
 }
+
+/* Profile Picture */
+.profile-pic {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure image doesn't stretch */
+  margin-bottom: 1rem; /* Space below the image */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 
 /* Skills Section */
 .skills-grid {
