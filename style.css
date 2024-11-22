@@ -476,6 +476,7 @@ footer {
 
 
 /* Skill Filters */
+/* Skill Filters */
 .skill-filters {
   display: flex;
   justify-content: center;
@@ -501,7 +502,7 @@ footer {
   background-color: #333;
 }
 
-/* Project Cards */
+/* Projects Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -515,13 +516,7 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h4 {
@@ -535,28 +530,6 @@ footer {
   color: #555;
 }
 
-.project-details {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 0.5rem;
-  border-radius: 5px;
-}
-
-.project-card:hover .project-details {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Repo Buttons */
 .project-card .btn {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -571,14 +544,6 @@ footer {
 
 .project-card .btn:hover {
   background-color: #333;
-}
-
-/* Grouping Projects by Category */
-.project-category h3 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: black;
 }
 
 /* Responsive Design */
