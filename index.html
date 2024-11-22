@@ -48,40 +48,127 @@
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<!-- Skills and Projects Section -->
 <section id="skills-projects" class="section">
   <div class="section-box">
     <h2>Skills & Projects</h2>
+
     <!-- Skill Filters -->
     <div class="skill-filters">
-      <button class="filter-btn" data-skill="all">Show All</button>
-      <button class="filter-btn" data-skill="python">Python</button>
-      <button class="filter-btn" data-skill="tensorflow">TensorFlow</button>
-      <button class="filter-btn" data-skill="aws">AWS</button>
-      <button class="filter-btn" data-skill="generative-ai">Generative AI</button>
-      <button class="filter-btn" data-skill="sql">SQL</button>
-      <button class="filter-btn" data-skill="data-viz">Data Visualization</button>
+      <button class="filter-btn active" data-skill="all">
+        <i class="fas fa-layer-group"></i> Show All
+      </button>
+      <button class="filter-btn" data-skill="python">
+        <i class="fas fa-python"></i> Python
+      </button>
+      <button class="filter-btn" data-skill="tensorflow">
+        <i class="fas fa-brain"></i> TensorFlow
+      </button>
+      <button class="filter-btn" data-skill="aws">
+        <i class="fas fa-cloud"></i> AWS
+      </button>
+      <button class="filter-btn" data-skill="generative-ai">
+        <i class="fas fa-magic"></i> Generative AI
+      </button>
+      <button class="filter-btn" data-skill="sql">
+        <i class="fas fa-database"></i> SQL
+      </button>
     </div>
 
-    <!-- Projects Grid -->
-    <div class="projects-grid">
-      <div class="project-card" data-skills="python tensorflow">
-        <h3>Project 1</h3>
-        <p>Built an end-to-end predictive analytics system for financial forecasting.</p>
+    <!-- Grouped Projects -->
+    <div class="project-category">
+      <h3>Machine Learning</h3>
+      <div class="projects-grid">
+        <div class="project-card" data-skills="python tensorflow aws">
+          <h4>Project 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+          <div class="project-details">
+            <p>Tools: Python, TensorFlow</p>
+            <p>Duration: 3 months</p>
+          </div>
+          <a href="https://github.com/sample-repo1" target="_blank" class="btn">View Code</a>
+        </div>
+        <div class="project-card" data-skills="generative-ai aws">
+          <h4>Project 2</h4>
+          <p>Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem.</p>
+          <div class="project-details">
+            <p>Tools: Generative AI, AWS Bedrock</p>
+            <p>Duration: 4 months</p>
+          </div>
+          <a href="https://github.com/sample-repo2" target="_blank" class="btn">View Code</a>
+        </div>
       </div>
-      <div class="project-card" data-skills="aws generative-ai">
-        <h3>Project 2</h3>
-        <p>Developed a generative AI-based image synthesis tool using AWS Bedrock.</p>
+    </div>
+
+    <div class="project-category">
+      <h3>Data Visualization</h3>
+      <div class="projects-grid">
+        <div class="project-card" data-skills="sql data-viz">
+          <h4>Project 3</h4>
+          <p>Phasellus accumsan cursus velit. Vivamus sagittis lacus vel augue laoreet.</p>
+          <div class="project-details">
+            <p>Tools: SQL, Tableau</p>
+            <p>Duration: 2 months</p>
+          </div>
+          <a href="https://github.com/sample-repo3" target="_blank" class="btn">View Code</a>
+        </div>
+        <div class="project-card" data-skills="python data-viz">
+          <h4>Project 4</h4>
+          <p>Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in.</p>
+          <div class="project-details">
+            <p>Tools: Python, Matplotlib</p>
+            <p>Duration: 1 month</p>
+          </div>
+          <a href="https://github.com/sample-repo4" target="_blank" class="btn">View Code</a>
+        </div>
       </div>
-      <div class="project-card" data-skills="sql data-viz">
-        <h3>Project 3</h3>
-        <p>Designed interactive dashboards with SQL and visualization tools.</p>
+    </div>
+
+    <div class="project-category">
+      <h3>Web Development</h3>
+      <div class="projects-grid">
+        <div class="project-card" data-skills="python sql">
+          <h4>Project 5</h4>
+          <p>Curabitur suscipit suscipit tellus. Fusce ac turpis quis ligula lacinia aliquet.</p>
+          <div class="project-details">
+            <p>Tools: Python, SQL</p>
+            <p>Duration: 2 months</p>
+          </div>
+          <a href="https://github.com/sample-repo5" target="_blank" class="btn">View Code</a>
+        </div>
+        <div class="project-card" data-skills="aws">
+          <h4>Project 6</h4>
+          <p>Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam.</p>
+          <div class="project-details">
+            <p>Tools: AWS Lambda, DynamoDB</p>
+            <p>Duration: 3 months</p>
+          </div>
+          <a href="https://github.com/sample-repo6" target="_blank" class="btn">View Code</a>
+        </div>
       </div>
-      <div class="project-card" data-skills="python data-viz">
-        <h3>Project 4</h3>
-        <p>Analyzed customer behavior and visualized patterns using Python.</p>
+    </div>
+
+    <div class="project-category">
+      <h3>AI Research</h3>
+      <div class="projects-grid">
+        <div class="project-card" data-skills="tensorflow generative-ai">
+          <h4>Project 7</h4>
+          <p>Vestibulum fringilla pede sit amet augue. Curabitur ullamcorper ultricies nisi.</p>
+          <div class="project-details">
+            <p>Tools: TensorFlow, GANs</p>
+            <p>Duration: 5 months</p>
+          </div>
+          <a href="https://github.com/sample-repo7" target="_blank" class="btn">View Code</a>
+        </div>
+        <div class="project-card" data-skills="sql python">
+          <h4>Project 8</h4>
+          <p>Quisque id mi. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien.</p>
+          <div class="project-details">
+            <p>Tools: SQL, Python</p>
+            <p>Duration: 6 months</p>
+          </div>
+          <a href="https://github.com/sample-repo8" target="_blank" class="btn">View Code</a>
+        </div>
       </div>
-      <!-- Add more project cards as needed -->
     </div>
   </div>
 </section>
