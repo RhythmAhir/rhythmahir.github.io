@@ -73,7 +73,7 @@ nav {
   color: #ffd700;
 }
 
-/* Hamburger Menu Button */
+/* Hamburger Menu Alignment */
 .hamburger {
   display: none; /* Hidden on larger screens */
   background: none;
@@ -82,6 +82,9 @@ nav {
   color: white;
   cursor: pointer;
   z-index: 1001;
+  position: absolute;
+  left: 1rem; /* Position to the left */
+  top: 1rem; /* Ensure proper spacing from the top */
 }
 
 /* Responsive Styles for Mobile */
