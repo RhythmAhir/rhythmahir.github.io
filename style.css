@@ -437,3 +437,19 @@ footer {
     margin: 0.3rem;
   }
 }
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-icons a {
+  font-size: 2rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #666;
+}
