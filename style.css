@@ -36,6 +36,48 @@ header {
   padding: 1rem;
 }
 
+.icon {
+  width: 30px;  /* Set width to your desired icon size */
+  height: 30px; /* Set height to your desired icon size */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  border-radius: 50%; /* Optional: Make it circular if needed */
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s ease;
+}
+
+/* Container for Icon and Button */
+.icon-with-button {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and button */
+}
+
+/* Button Link Styling */
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Match icon size */
+  height: 30px;
+  background-color: black; /* Button background color */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove default border */
+  font-size: 14px; /* Adjust text size */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button Hover Effect */
+.icon-button:hover {
+  background-color: #333; /* Darker color on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+
 /* Navbar Links */
 .nav-links {
   display: flex;
@@ -141,7 +183,7 @@ header {
   background: linear-gradient(135deg, #ffffff, #f9f9f9);
   color: black;
   text-align: center;
-  padding: 4rem 1rem; /* Reduced padding */
+  padding: 1rem 1rem; /* Reduced padding */
 }
 
 .intro-container {
