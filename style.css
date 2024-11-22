@@ -1,47 +1,73 @@
 /* Intro Section */
 .intro-section {
-  background: url('images/background.jpg') center/cover no-repeat, 
-              linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)); 
+  background: linear-gradient(135deg, #0056b3, #007bff); /* Gradient background for depth */
   color: white;
   text-align: center;
-  padding: 5rem 1rem; /* More spacing for a bold look */
-  animation: fadeIn 1.5s ease-in-out; /* Subtle fade-in animation */
+  padding: 6rem 1rem; /* Larger padding for emphasis */
+  box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for professionalism */
+  animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Intro Container */
 .intro-container {
   max-width: 1200px;
   margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for text clarity */
 }
 
+/* Name Styling */
 .intro-section h1 {
-  font-size: 3.5rem; /* Larger font size for name */
-  margin: 0 0 1rem; /* Space below the name */
+  font-size: 4rem; /* Larger font size for name */
   font-weight: bold;
-  letter-spacing: 0.05em;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Shadow for readability */
+  margin: 0 0 1rem;
+  letter-spacing: 0.1em; /* Professional letter spacing */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  animation: slideIn 1.5s ease-in-out; /* Slide-in animation */
 }
 
+/* Title Styling */
 .intro-section p {
-  font-size: 1.6rem; /* Medium font size for title */
+  font-size: 1.8rem; /* Medium font size for title */
   margin: 0;
   font-weight: 500;
   display: flex;
-  justify-content: center; /* Center align icons and text */
-  align-items: center; /* Align icons vertically */
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem; /* Space between icons and text */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  animation: slideIn 2s ease-in-out; /* Slide-in animation */
 }
 
 .intro-section p i {
-  font-size: 1.6rem; /* Icon size matches text */
-  color: #ffd700; /* Golden color for icons */
+  font-size: 2rem; /* Slightly larger icons */
+  color: #ffd700; /* Golden color for contrast */
 }
 
-/* Fade-In Animation */
+/* Divider Styling */
+.divider {
+  width: 50%;
+  margin: 2rem auto;
+  border: 0;
+  height: 2px;
+  background: #ffd700; /* Golden divider line */
+}
+
+/* Fade-In Animation for Entire Section */
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-In Animation for Text */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
