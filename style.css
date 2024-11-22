@@ -177,73 +177,130 @@ header {
   }
 }
 
-
-/* Intro Section */
+/* Intro Section Styling */
 .intro-section {
-  background: linear-gradient(135deg, #ffffff, #f9f9f9);
-  color: black;
+  padding: 0.5rem 0.5rem;
   text-align: center;
-  padding: 1rem 1rem; /* Reduced padding */
+  background-color: white;
 }
 
-.intro-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.intro-section h1 {
-  font-size: 2rem; /* Reduced font size */
-  font-weight: bold;
+.intro-container h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.05em;
 }
 
-.intro-section p {
-  font-size: 1.2rem; /* Reduced font size */
+.intro-details {
+  font-size: 1rem;
   margin-bottom: 1rem;
-  font-weight: 500;
+  line-height: 1.5;
+}
+
+.certifications {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.certifications span {
+  display: flex;
   align-items: center;
+  justify-content: center; /* Center items on mobile */
   gap: 0.5rem;
-  color: black;
+  flex-wrap: wrap; /* Ensure wrapping on small screens */
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.icon-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: #333;
 }
 
 .contact-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .contact-icons a {
-  font-size: 1.5rem; /* Smaller icons */
+  font-size: 1.5rem;
   color: black;
   transition: color 0.3s ease;
 }
 
 .contact-icons a:hover {
-  color: #666;
+  color: #333;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .intro-section {
-    padding: 3rem 1rem;
-  }
-
-  .intro-section h1 {
+  .intro-container h1 {
     font-size: 1.8rem;
   }
 
-  .intro-section p {
-    font-size: 1rem;
+  .intro-details {
+    font-size: 0.9rem;
+  }
+
+  .certifications span {
+    flex-direction: column; /* Stack certifications */
+    text-align: center;
+  }
+
+  .icon {
+    width: 25px; /* Smaller icons for mobile */
+    height: 25px;
+  }
+
+  .icon-button {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
   }
 
   .contact-icons a {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Reduce icon size for mobile */
   }
 }
+
+@media (max-width: 480px) {
+  .intro-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-details {
+    font-size: 0.8rem;
+  }
+
+  .certifications span {
+    gap: 0.3rem;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-button {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
 
 /* Back to Top Button */
 #backToTop {
