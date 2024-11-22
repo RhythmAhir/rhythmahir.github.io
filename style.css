@@ -253,6 +253,25 @@ header nav a:hover {
   color: #007bff;
 }
 
+/* Education Section */
+.education-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.education-list li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.education-list strong {
+  color: #007bff;
+}
+
+
 /* Certifications Section */
 .certifications-grid {
   display: grid;
