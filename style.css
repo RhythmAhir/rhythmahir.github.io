@@ -1,6 +1,6 @@
 /* Intro Section */
 .intro-section {
-  background: linear-gradient(135deg, #0056b3, #007bff); /* Gradient background for depth */
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
   color: white;
   text-align: center;
   padding: 6rem 1rem; /* Larger padding for emphasis */
@@ -23,6 +23,7 @@
   letter-spacing: 0.1em; /* Professional letter spacing */
   text-transform: uppercase; /* Uppercase for emphasis */
   animation: slideIn 1.5s ease-in-out; /* Slide-in animation */
+  color: white;
 }
 
 /* Title Styling */
