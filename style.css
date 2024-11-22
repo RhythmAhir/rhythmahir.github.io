@@ -197,31 +197,72 @@ nav {
 }
 
 
-/* Experience and Education Section */
-.experience-list,
-.education-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+/* Timeline Styles */
+.timeline {
+  list-style: none;
   padding: 0;
-  margin: 2rem auto;
+  margin: 0 auto;
   max-width: 800px;
+  position: relative;
 }
 
-.experience-list li,
-.education-list li {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-size: 1.2rem;
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #ddd;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 1.5rem 2rem;
+  width: 50%;
+  text-align: left;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   color: black;
 }
 
-.experience-list li:hover,
-.education-list li:hover {
+.timeline-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
   background-color: black;
-  color: white;
+  border-radius: 50%;
+  border: 4px solid white;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+  left: calc(50% - 8px - 4px); /* Adjust for alignment */
+}
+
+.timeline-item:nth-child(even)::after {
+  left: calc(50% - 8px + 4px); /* Adjust for alignment */
 }
 
 /* Certifications Section */
