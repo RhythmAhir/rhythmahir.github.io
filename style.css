@@ -197,72 +197,67 @@ nav {
 }
 
 
-/* Timeline Styles */
-.timeline {
+/* Experience & Education Section */
+.experience-education-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-column,
+.education-column {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-column h2,
+.education-column h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.experience-list,
+.education-list {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
-  position: relative;
+  margin: 0;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background-color: #ddd;
+.experience-list li,
+.education-list li {
+  margin-bottom: 2rem;
 }
 
-.timeline-item {
-  position: relative;
-  padding: 1.5rem 2rem;
-  width: 50%;
-  text-align: left;
-}
-
-.timeline-item:nth-child(odd) {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-  left: 50%;
-}
-
-.timeline-item h3 {
+.experience-list li h3,
+.education-list li h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: black;
 }
 
-.timeline-item p {
-  margin: 0.5rem 0;
+.experience-list li p,
+.education-list li p {
+  margin: 0;
   font-size: 1rem;
   color: #555;
 }
 
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  top: 1.5rem;
-  left: calc(50% - 8px);
-  width: 16px;
-  height: 16px;
-  background-color: black;
-  border-radius: 50%;
-  border: 4px solid white;
-  z-index: 1;
-}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .experience-education-container {
+    grid-template-columns: 1fr;
+  }
 
-.timeline-item:nth-child(odd)::after {
-  left: calc(50% - 8px - 4px); /* Adjust for alignment */
-}
-
-.timeline-item:nth-child(even)::after {
-  left: calc(50% - 8px + 4px); /* Adjust for alignment */
+  .experience-column,
+  .education-column {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Certifications Section */
