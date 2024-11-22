@@ -3,71 +3,65 @@
   background: linear-gradient(135deg, #ffffff, #f9f9f9);
   color: black;
   text-align: center;
-  padding: 6rem 1rem;
-  box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1.5s ease-in-out;
+  padding: 4rem 1rem; /* Reduced padding */
 }
 
 .intro-container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
-  text-shadow: none;
 }
 
 .intro-section h1 {
-  font-size: 4rem;
+  font-size: 2rem; /* Reduced font size */
   font-weight: bold;
-  margin: 0 0 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  animation: slideIn 1.5s ease-in-out;
-  color: black;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
 }
 
 .intro-section p {
-  font-size: 1.8rem;
-  margin: 0;
+  font-size: 1.2rem; /* Reduced font size */
+  margin-bottom: 1rem;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  animation: slideIn 2s ease-in-out;
   color: black;
 }
 
-.intro-section p i {
-  font-size: 2rem;
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  font-size: 1.5rem; /* Smaller icons */
   color: black;
+  transition: color 0.3s ease;
 }
 
-.divider {
-  width: 50%;
-  margin: 2rem auto;
-  height: 2px;
-  background: black;
+.contact-icons a:hover {
+  color: #666;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 3rem 1rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+  .intro-section h1 {
+    font-size: 1.8rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  .contact-icons a {
+    font-size: 1.2rem;
   }
 }
 
@@ -134,22 +128,48 @@ h1 {
   margin-right: 2rem;
 }
 
-nav {
-  flex-grow: 1;
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 1rem; /* Position hamburger icon on the left */
+  top: 1rem;
+  z-index: 1100;
 }
 
+/* Navbar for Mobile (Dropdown on Left) */
 .nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust for header height */
+  left: 0; /* Position the dropdown to the left */
+  background-color: black;
+  padding: 1rem;
+  gap: 1rem;
+  width: 200px; /* Fixed width for the dropdown */
+  border-radius: 0 8px 8px 0; /* Rounded edges on the right */
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.nav-links.active {
   display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
+}
+
+.nav-links li {
+  margin-bottom: 0.5rem;
 }
 
 .nav-links li a {
   color: white;
   text-decoration: none;
+  font-size: 1rem;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -158,14 +178,29 @@ nav {
   color: #ccc;
 }
 
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
+/* Desktop Nav (Hidden on Mobile) */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default */
+  }
 }
 
 /* About Section */
