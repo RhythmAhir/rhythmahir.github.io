@@ -299,10 +299,10 @@ header {
 
 .experience-column h2,
 .education-column h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   color: black;
-  text-align: center;
+text-align: center;
 }
 
 .experience-list,
@@ -642,8 +642,9 @@ footer {
 
 .skills-projects-section h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: black;
 }
 
 
