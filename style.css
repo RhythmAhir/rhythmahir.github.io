@@ -117,6 +117,16 @@ header nav a:hover {
   transform: scale(1.1);
 }
 
+/* Projects Section Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minimum card width */
+  gap: 1.5rem; /* Maintain spacing between cards */
+  justify-items: center;
+  max-width: 1200px; /* Restrict the grid width */
+  margin: 0 auto; /* Center the grid */
+}
+
 /* Individual Project Card */
 .project-card {
   width: 100%;
@@ -127,16 +137,6 @@ header nav a:hover {
   text-align: center;
   padding: 1rem; /* Maintain padding */
   box-sizing: border-box; /* Include padding in dimensions */
-}
-
-/* Projects Section Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minimum card width */
-  gap: 1.5rem; /* Maintain spacing between cards */
-  justify-items: center;
-  max-width: 1200px; /* Restrict the grid width */
-  margin: 0 auto; /* Center the grid */
 }
 
 /* Inner Card (for flipping effect) */
@@ -161,14 +161,14 @@ header nav a:hover {
   left: 0;
   border-radius: 10px;
   backface-visibility: hidden;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack content vertically */
   justify-content: center;
   align-items: center;
   background-color: white;
   padding: 1rem;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding in width/height */
 }
 
 .card-back {
@@ -177,14 +177,15 @@ header nav a:hover {
 
 /* Front Content */
 .card-front img {
-  width: 75%;
+  width: 75%; /* Adjust image size */
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Space below image */
 }
 
 /* GitHub Button */
 .card-front .btn {
   margin-top: 1rem;
+  margin-bottom: 1rem; /* Add space below GitHub button */
   padding: 0.5rem 1rem;
   background-color: #007bff;
   color: white;
@@ -201,7 +202,7 @@ header nav a:hover {
 
 /* Rotate (Flip) Button */
 .flip-btn {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; /* Space between GitHub button and Flip button */
   padding: 0.4rem 1rem;
   background-color: transparent;
   color: #007bff;
