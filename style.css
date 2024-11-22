@@ -217,7 +217,7 @@ header {
 }
 
 .icon-button {
-  padding: 0.4rem 0.8rem;
+  /* padding: 0.3rem 0.3rem; */
   font-size: 0.8rem;
   background-color: black;
   color: white;
@@ -269,7 +269,7 @@ header {
 
   .icon-button {
     font-size: 0.7rem;
-    padding: 0.3rem 0.6rem;
+    /* padding: 0.3rem 0.6rem; */
   }
 
   .contact-icons a {
