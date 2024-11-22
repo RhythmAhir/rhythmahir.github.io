@@ -1,3 +1,132 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+/* Resume Button */
+.resume-btn {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    background-color: black;
+    padding: 1rem;
+    width: 200px;
+    gap: 1rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .resume-btn {
+    margin-left: auto;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  .nav-links li {
+    text-align: left;
+  }
+
+  .resume-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Intro Section */
 .intro-section {
   background: linear-gradient(135deg, #ffffff, #f9f9f9);
@@ -92,115 +221,6 @@
 
 #backToTop.show {
   display: flex;
-}
-
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  color: black;
-  line-height: 1.6;
-}
-
-header {
-  background-color: black;
-  color: white;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  margin-right: 2rem;
-}
-
-/* Hamburger Icon */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  left: 1rem; /* Position hamburger icon on the left */
-  top: 1rem;
-  z-index: 1100;
-}
-
-/* Navbar for Mobile (Dropdown on Left) */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px; /* Adjust for header height */
-  left: 0; /* Position the dropdown to the left */
-  background-color: black;
-  padding: 1rem;
-  gap: 1rem;
-  width: 200px; /* Fixed width for the dropdown */
-  border-radius: 0 8px 8px 0; /* Rounded edges on the right */
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.nav-links.active {
-  display: flex;
-}
-
-.nav-links li {
-  margin-bottom: 0.5rem;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #ccc;
-}
-
-/* Desktop Nav (Hidden on Mobile) */
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
-
-  .nav-links {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-}
-
-/* Mobile Nav */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none; /* Hidden by default */
-  }
 }
 
 /* About Section */
@@ -481,17 +501,6 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  header nav a {
-    margin: 0.3rem;
-  }
-}
 .contact-icons {
   display: flex;
   justify-content: center;
@@ -511,38 +520,56 @@ footer {
 
 
 /* Skill Filters */
+/* Skills & Projects Section */
+.skills-projects-section {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.skills-projects-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+
 /* Skill Filters */
 .skill-filters {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
 .filter-btn {
   padding: 0.5rem 1rem;
-  background-color: black;
-  color: white;
-  border: none;
+  background-color: white; /* Default background */
+  color: black; /* Default text color */
+  border: 1px solid black; /* Border for unselected buttons */
   border-radius: 5px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.filter-btn:hover,
+.filter-btn:hover {
+  background-color: #f0f0f0; /* Light hover effect */
+  color: black;
+}
+
 .filter-btn.active {
-  background-color: #333;
+  background-color: black; /* Active button background */
+  color: white; /* Active button text color */
+  border: 1px solid black; /* Active button border */
 }
 
-/* Projects Grid */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem auto;
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 1rem;
 }
 
 .project-card {
@@ -554,6 +581,11 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .project-card h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -563,6 +595,7 @@ footer {
 .project-card p {
   font-size: 0.9rem;
   color: #555;
+  margin: 1rem 0;
 }
 
 .project-card .btn {
@@ -573,7 +606,6 @@ footer {
   border-radius: 5px;
   font-size: 0.9rem;
   text-decoration: none;
-  display: inline-block;
   transition: background-color 0.3s ease;
 }
 
@@ -584,83 +616,33 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .project-card {
+    width: 100%; /* Full-width cards */
+  }
+
+  .filter-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
-/* General Header Styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: black;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Hamburger Icon */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-/* Nav Links */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #ccc;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
+@media (max-width: 480px) {
+  .skills-projects-section h2 {
+    font-size: 1.8rem;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: black;
-    padding: 1rem 2rem;
-    width: 200px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin-bottom: 1rem;
-  }
-
-  .nav-links li a {
+  .project-card h4 {
     font-size: 1rem;
-    color: white;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  .project-card .btn {
+    font-size: 0.85rem;
   }
 }

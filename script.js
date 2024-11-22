@@ -15,18 +15,17 @@ function flipCard(button) {
     cardInner.classList.add('flipped');
   }
 }
-// Toggle Navigation Menu
+// Select hamburger and nav links
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-const navLinksItems = document.querySelectorAll('.nav-links li a');
 
-// Toggle menu visibility on hamburger click
+// Toggle navigation menu on hamburger click
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Hide menu when a link is clicked
-navLinksItems.forEach(link => {
+// Close menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
   });
@@ -75,3 +74,4 @@ filterButtons.forEach(button => {
     });
   });
 });
+
