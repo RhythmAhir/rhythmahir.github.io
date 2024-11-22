@@ -260,29 +260,69 @@ header nav a:hover {
 }
 
 /* Blog Section */
-.blog-links {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
+/* #blog {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+} */
 
-.blog-links li {
+#blog h2 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.blog-links a {
   color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
 }
 
-.blog-links a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+#blog p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
 }
+
+.blog-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.highlight {
+  flex: 1 1 calc(30% - 1rem);
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.highlight h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.highlight p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
 
 /* Contact Section */
 .contact-icons {
