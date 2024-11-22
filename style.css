@@ -436,6 +436,119 @@ header {
   color: #555;
 }
 
+/* Blog Section */
+/* Blog Section */
+.blog-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Call-to-Action Button */
+.blog-cta {
+  margin-top: 2rem;
+}
+
+.blog-cta .btn {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-cta .btn:hover {
+  background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+}
+
+
 /* Section Styling */
 .section {
   padding: 2rem;
