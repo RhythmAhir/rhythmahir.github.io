@@ -548,15 +548,35 @@ text-align: center;
   margin-bottom: 1rem;
 }
 
-
-/* Responsive Design */
+/* Responsive Design for Stacking Certifications */
 @media (max-width: 768px) {
+  .certification-carousel {
+    flex-direction: column; 
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
   .certification-card {
-    flex: 0 0 80%;
+    width: 90%; 
+    padding: 1.5rem;
   }
 
   .certification-card img {
-    width: 80px;
+    width: 70px; 
+  }
+  
+  .certification-card h3 {
+    font-size: 1rem;
+  }
+
+  .certification-card p {
+    font-size: 0.9rem;
+  }
+
+  .certification-card .btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
@@ -595,7 +615,6 @@ text-align: center;
   color: #555;
 }
 
-/* Blog Section */
 /* Blog Section */
 .blog-section {
   padding: 3rem 1rem;
@@ -791,7 +810,6 @@ footer {
 }
 
 
-/* Skill Filters */
 /* Skills & Projects Section */
 .skills-projects-section {
   padding: 2rem 1rem;
@@ -889,11 +907,11 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
+    grid-template-columns: 1fr; 
   }
 
   .project-card {
-    width: 100%; /* Full-width cards */
+    width: 90%; 
   }
 
   .filter-btn {
