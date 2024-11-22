@@ -167,6 +167,7 @@ nav {
   left: 1rem;
   top: 1rem;
 }
+
 /* About Section */
 .about-grid {
   display: grid;
@@ -176,24 +177,51 @@ nav {
   margin: 2rem auto;
   max-width: 800px;
   text-align: left;
-  list-style: none;
-  padding: 0;
 }
 
-.about-image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-pic {
+.about-grid img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centers the image */
+}
+
+.about-grid p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center; /* Centers text for smaller screens */
+    gap: 1.5rem;
+  }
+
+  .about-grid img {
+    width: 120px;
+    height: 120px; /* Adjust image size for mobile */
+  }
+
+  .about-grid p {
+    font-size: 0.9rem;
+    padding: 0 1rem; /* Add padding for better readability on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-grid img {
+    width: 100px;
+    height: 100px; /* Further reduce image size for very small screens */
+  }
+
+  .about-grid p {
+    font-size: 0.85rem;
+  }
 }
 
 
